@@ -14,6 +14,9 @@
 	--navy: #1A1A3A;
 }
 
+body {
+	font-family: 'Pretendard', sans-serif;
+}
 a{
 	text-decoration: none;
 	color: #000;
@@ -42,10 +45,63 @@ header nav ul li a:hover{
 	text-decoration: underline;
 }
 /* about me section 시작 */
-.about{
-	padding: calc(var(--base-unit)*9);
-}
-.about .container{
+.About{
+	padding: calc(var(--base-unit)*9) 0;
 	/* height: 432px; */
 	height: calc(var(--base-unit)*27);
+}
+.About .container{
+	height: 100%;
+	width: 1440px;
+}
+.About .container .About_info_1{
+	background: url(/img/info_1.jpg);
+	width: 340px;
+	height: 432px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	border-radius: 35px;
+	text-indent: -99999999em;
+}
+.About .container .About_info_2{
+	height: 432px;
+	display: flex;
+	flex-direction: column;
+}
+.About .container h2{
+	color: var(--navy);
+	text-align: center;
+	font-family: Playfair Display;
+	font-size: 140px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 160px; /* 114.286% */
+	text-transform: capitalize;
+}
+.About .container .h4_info{
+	text-align: right;
+	font-size: 34px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 42px;
+	padding: 36px 0;
+}
+.About .container .p_info{
+	text-align: right;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 28px; /* 140% */
+}
+.About .myadvantage{
+	padding: calc(var(--base-unit)*8) 0;
+}
+.About .About_myadvantage h3{
+	text-align: center;
+	font-size: 64px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 64px; /* 100% */
+	padding-bottom: calc(var(--base-unit)*4);
 }

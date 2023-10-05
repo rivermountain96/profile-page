@@ -21,6 +21,9 @@ a{
 	text-decoration: none;
 	color: #000;
 }
+h5{
+	font-weight: bold;
+}
 .container{
 	width: 1440px;
 }
@@ -104,4 +107,39 @@ header nav ul li a:hover{
 	font-weight: 700;
 	line-height: 64px; /* 100% */
 	padding-bottom: calc(var(--base-unit)*4);
+}
+.About .myImg .myImg1,
+.About .myImg .myImg2,
+.About .myImg .myImg3{
+	text-align: center;
+}
+.About .container .myImg_info2{
+	background: url(/img/info_2.jpg);
+}
+.About .container .myImg_info3{
+	background: url(/img/info_3.jpg);
+}
+.About .container .myImg_info4{
+	background: url(/img/info_4.jpg);
+}
+.About .container .myImg_info2,
+.About .container .myImg_info3,
+.About .container .myImg_info4{
+	width: 340px;
+	height: 240px;
+	border-radius: 35px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	text-indent: -9999em;
+	margin: 0 auto;
+}
+.About .container .myImg h5{
+	padding: calc(var(--base-unit)*1) 0;
+}
+.About .container .myImg p{
+	width: 340px;
+	text-align: center;
+	margin: 0 auto;
+	line-height: 19px;
 }

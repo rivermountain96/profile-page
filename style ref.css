@@ -22,16 +22,6 @@ a {
   text-decoration: none;
   color: #000;
 }
-.h2 {
-  color: var(--navy);
-  text-align: center;
-  font-family: Playfair Display;
-  font-size: 140px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 160px; /* 114.286% */
-  text-transform: capitalize;
-}
 h5 {
   font-weight: bold;
 }
@@ -60,7 +50,7 @@ header nav ul li a:hover {
 }
 /* about me section 시작 */
 .About {
-  padding-top: calc(var(--base-unit) * 9);
+  padding: calc(var(--base-unit) * 9) 0;
   /* height: 432px; */
   height: calc(var(--base-unit) * 27);
 }
@@ -83,6 +73,16 @@ header nav ul li a:hover {
   display: flex;
   flex-direction: column;
 }
+.About .container h2 {
+  color: var(--navy);
+  text-align: center;
+  font-family: Playfair Display;
+  font-size: 140px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 160px; /* 114.286% */
+  text-transform: capitalize;
+}
 .About .container .h4_info {
   text-align: right;
   font-size: 34px;
@@ -98,10 +98,10 @@ header nav ul li a:hover {
   font-weight: 500;
   line-height: 28px; /* 140% */
 }
-.myadvantage {
+.About .myadvantage {
   padding: calc(var(--base-unit) * 8) 0;
 }
-.Adventage_myadvantage h3 {
+.About .About_myadvantage h3 {
   text-align: center;
   font-size: 64px;
   font-style: normal;
@@ -109,23 +109,23 @@ header nav ul li a:hover {
   line-height: 64px; /* 100% */
   padding-bottom: calc(var(--base-unit) * 4);
 }
-.myImg .myImg1,
-.myImg .myImg2,
-.myImg .myImg3 {
+.About .myImg .myImg1,
+.About .myImg .myImg2,
+.About .myImg .myImg3 {
   text-align: center;
 }
-.container .myImg_info2 {
+.About .container .myImg_info2 {
   background: url(/img/info_2.jpg);
 }
-.container .myImg_info3 {
+.About .container .myImg_info3 {
   background: url(/img/info_3.jpg);
 }
-.container .myImg_info4 {
+.About .container .myImg_info4 {
   background: url(/img/info_4.jpg);
 }
-.container .myImg_info2,
-.container .myImg_info3,
-.container .myImg_info4 {
+.About .container .myImg_info2,
+.About .container .myImg_info3,
+.About .container .myImg_info4 {
   width: 340px;
   height: 240px;
   border-radius: 35px;
@@ -134,27 +134,23 @@ header nav ul li a:hover {
   background-position: center;
   text-indent: -9999em;
   margin: 0 auto;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
-.container .myImg h5 {
-  padding: calc(var(--base-unit) * 2) 0 var(--base-unit) 0;
+.About .container .myImg h5 {
+  padding: calc(var(--base-unit) * 1) 0;
 }
-.container .myImg p {
+.About .container .myImg p {
   width: 340px;
   text-align: center;
   margin: 0 auto;
   line-height: 19px;
   font-weight: 500;
 }
-.Mainhistory {
-  padding-bottom: calc(var(--base-unit) * 8.5);
-}
-.container .history {
+.About .container .history {
   text-align: center;
   display: flex;
   align-items: center;
 }
-.container .history_title {
+.About .container .history_title {
   text-align: right;
   font-size: 64px;
   font-weight: 700;
@@ -163,20 +159,22 @@ header nav ul li a:hover {
   padding-right: 90px;
   box-sizing: border-box;
 }
-.container .history_content {
+.About .container .history_content {
   text-align: left;
   width: 50%;
   padding-left: 40px;
   box-sizing: border-box;
   font-weight: 500;
 }
-.container .history_content th {
+.About .container .history_content th {
   padding: calc(var(--base-unit) * 1) 0;
 }
-.container .history_content td {
+.About .container .history_content td {
   padding-left: 20px;
 }
 /* skills section 시작 */
 .Skills {
-  padding: calc(var(--base-unit) * 4) 0;
+  padding: calc(var(--base-unit) * 9) 0;
+  /* height: 432px; */
+  height: calc(var(--base-unit) * 27);
 }

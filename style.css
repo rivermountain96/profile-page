@@ -1,145 +1,172 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;500&family=Playfair+Display:wght@700&display=swap');
-@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
-@import url('https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;500&family=Playfair+Display:wght@700&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
 @font-face {
-	font-family: 'Pretendard-Regular';
-	src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
-	font-weight: 400, 500;
-	font-style: normal;
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400, 500;
+  font-style: normal;
 }
 
 :root {
-	--base-unit: 16px;
-	--navy: #1A1A3A;
+  --base-unit: 16px;
+  --navy: #1a1a3a;
 }
 
 body {
-	font-family: 'Pretendard', sans-serif;
+  font-family: "Pretendard", sans-serif;
 }
-a{
-	text-decoration: none;
-	color: #000;
+a {
+  text-decoration: none;
+  color: #000;
 }
-h5{
-	font-weight: bold;
+h5 {
+  font-weight: bold;
 }
-.container{
-	width: 1440px;
+.container {
+  width: 1440px;
 }
 /* header */
-header{
-	border-bottom: 1px solid #FFF;
-	box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.25);
-	position: fixed;
-	width: 100%;
+header {
+  border-bottom: 1px solid #fff;
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.25);
+  position: fixed;
+  width: 100%;
 }
-header nav{
-	height: 80px;
+header nav {
+  height: 80px;
 }
-header nav ul{
-	height: 100%;
+header nav ul {
+  height: 100%;
 }
-header nav ul li{
-	font-size: 28px;
-	line-height: 33px;
+header nav ul li {
+  font-size: 28px;
+  line-height: 33px;
 }
-header nav ul li a:hover{
-	text-decoration: underline;
+header nav ul li a:hover {
+  text-decoration: underline;
 }
 /* about me section 시작 */
-.About{
-	padding: calc(var(--base-unit)*9) 0;
-	/* height: 432px; */
-	height: calc(var(--base-unit)*27);
+.About {
+  padding: calc(var(--base-unit) * 9) 0;
+  /* height: 432px; */
+  height: calc(var(--base-unit) * 27);
 }
-.About .container{
-	height: 100%;
-	width: 1440px;
+.About .container {
+  height: 100%;
+  width: 1440px;
 }
-.About .container .About_info_1{
-	background: url(/img/info_1.jpg);
-	width: 340px;
-	height: 432px;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-	border-radius: 35px;
-	text-indent: -99999999em;
+.About .container .About_info_1 {
+  background: url(/img/info_1.jpg);
+  width: 340px;
+  height: 432px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 35px;
+  text-indent: -99999999em;
 }
-.About .container .About_info_2{
-	height: 432px;
-	display: flex;
-	flex-direction: column;
+.About .container .About_info_2 {
+  height: 432px;
+  display: flex;
+  flex-direction: column;
 }
-.About .container h2{
-	color: var(--navy);
-	text-align: center;
-	font-family: Playfair Display;
-	font-size: 140px;
-	font-style: normal;
-	font-weight: 700;
-	line-height: 160px; /* 114.286% */
-	text-transform: capitalize;
+.About .container h2 {
+  color: var(--navy);
+  text-align: center;
+  font-family: Playfair Display;
+  font-size: 140px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 160px; /* 114.286% */
+  text-transform: capitalize;
 }
-.About .container .h4_info{
-	text-align: right;
-	font-size: 34px;
-	font-style: normal;
-	font-weight: 600;
-	line-height: 42px;
-	padding: 36px 0;
+.About .container .h4_info {
+  text-align: right;
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 42px;
+  padding: 36px 0;
 }
-.About .container .p_info{
-	text-align: right;
-	font-size: 20px;
-	font-style: normal;
-	font-weight: 500;
-	line-height: 28px; /* 140% */
+.About .container .p_info {
+  text-align: right;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px; /* 140% */
 }
-.About .myadvantage{
-	padding: calc(var(--base-unit)*8) 0;
+.About .myadvantage {
+  padding: calc(var(--base-unit) * 8) 0;
 }
-.About .About_myadvantage h3{
-	text-align: center;
-	font-size: 64px;
-	font-style: normal;
-	font-weight: 700;
-	line-height: 64px; /* 100% */
-	padding-bottom: calc(var(--base-unit)*4);
+.About .About_myadvantage h3 {
+  text-align: center;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 64px; /* 100% */
+  padding-bottom: calc(var(--base-unit) * 4);
 }
 .About .myImg .myImg1,
 .About .myImg .myImg2,
-.About .myImg .myImg3{
-	text-align: center;
+.About .myImg .myImg3 {
+  text-align: center;
 }
-.About .container .myImg_info2{
-	background: url(/img/info_2.jpg);
+.About .container .myImg_info2 {
+  background: url(/img/info_2.jpg);
 }
-.About .container .myImg_info3{
-	background: url(/img/info_3.jpg);
+.About .container .myImg_info3 {
+  background: url(/img/info_3.jpg);
 }
-.About .container .myImg_info4{
-	background: url(/img/info_4.jpg);
+.About .container .myImg_info4 {
+  background: url(/img/info_4.jpg);
 }
 .About .container .myImg_info2,
 .About .container .myImg_info3,
-.About .container .myImg_info4{
-	width: 340px;
-	height: 240px;
-	border-radius: 35px;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-	text-indent: -9999em;
-	margin: 0 auto;
+.About .container .myImg_info4 {
+  width: 340px;
+  height: 240px;
+  border-radius: 35px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-indent: -9999em;
+  margin: 0 auto;
 }
-.About .container .myImg h5{
-	padding: calc(var(--base-unit)*1) 0;
+.About .container .myImg h5 {
+  padding: calc(var(--base-unit) * 1) 0;
 }
-.About .container .myImg p{
-	width: 340px;
-	text-align: center;
-	margin: 0 auto;
-	line-height: 19px;
+.About .container .myImg p {
+  width: 340px;
+  text-align: center;
+  margin: 0 auto;
+  line-height: 19px;
+}
+.About .container .history {
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+.About .container .history_title {
+  text-align: right;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 80px;
+  width: 50%;
+  padding-right: 90px;
+  box-sizing: border-box;
+}
+.About .container .history_content {
+  text-align: left;
+  width: 50%;
+  padding-left: 40px;
+  box-sizing: border-box;
+}
+.About .container .history_content th {
+  padding: calc(var(--base-unit) * 1) 0;
+}
+.About .container .history_content td {
+  padding-left: 20px;
 }

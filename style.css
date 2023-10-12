@@ -13,6 +13,9 @@
 :root {
   --base-unit: 16px;
   --navy: #1a1a3a;
+  --blue: #4d8eff;
+  --gray: #444961;
+  --yellow: #f7d241;
 }
 
 body {
@@ -44,7 +47,8 @@ header {
   box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.25);
   position: fixed;
   width: 100%;
-  background: #4d8eff;
+  background: var(--blue);
+  z-index: 10;
 }
 header nav {
   height: 80px;
@@ -90,6 +94,7 @@ header nav ul li a:active {
   background-position: center;
   border-radius: 35px;
   text-indent: -99999999em;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 .About .container .About_info_2 {
   height: 432px;
@@ -221,9 +226,92 @@ header nav ul li a:active {
   padding: calc(var(--base-unit) * 10) 0;
 }
 .Projects .h2 {
-  padding-bottom: calc(var(--base-unit) * 8);
+  padding-bottom: calc(var(--base-unit) * 10);
 }
 .Projects .swiper {
-  width: 1000px;
-  height: 500px;
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+}
+.Projects .swiper-slide {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+.Projects .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  transition: 0.3s;
+}
+.Projects .swiper-slide img:hover {
+  cursor: pointer;
+  /* transform: translateY(-5%); */
+}
+.Projects .project_name {
+  position: relative;
+  padding-bottom: calc(var(--base-unit) * 4);
+  font-size: 60px;
+  font-weight: 600;
+  color: var(--gray);
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.Projects .project_name:after {
+  content: "";
+  position: absolute;
+  bottom: calc(var(--base-unit) * 4);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 15px;
+  background-color: var(--yellow);
+  z-index: -10;
+}
+.Projects .project_info {
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  position: absolute;
+  top: 12%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  /*
+  align-items: center;
+  justify-content: center;
+  display: flex; */
+  transition: 0.3s;
+}
+.Projects .project_info h4,
+.Projects .project_info p {
+  padding: 13px;
+}
+.Projects .project_info h4 {
+  font-size: 58px;
+  font-weight: bold;
+  padding: 100px 0 40px 0;
+}
+.Projects .project_info p {
+  font-size: 18px;
+}
+.Projects .link {
+  position: absolute;
+  width: 100px;
+  height: 40px;
+  left: 100%;
+  top: 0;
+}
+/* 이미지에 호버할 때 project_info 표시 */
+.Projects .swiper-slide:hover .project_info {
+  opacity: 1;
+}
+.swiper-pagination .swiper-pagination-bullet-active {
+  background-color: var(--blue);
+}
+.swiper-button-prev,
+.swiper-button-next {
+  color: var(--blue);
 }

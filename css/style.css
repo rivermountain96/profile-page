@@ -35,6 +35,12 @@ a {
   line-height: 160px; /* 114.286% */
   text-transform: capitalize;
 }
+.h3{
+  text-align: center;
+  font-size: 60px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
 h5 {
   font-weight: bold;
 }
@@ -62,23 +68,19 @@ header nav ul li {
 }
 header nav ul li a {
   color: #fff;
-  /* color: var(--navy); */
   font-weight: 400;
   transition: 0.2s;
 }
 header nav ul li a:hover {
   color: #000;
-  /* color: var(--navy); */
   font-weight: bold;
 }
 header nav ul li a:active {
-  /* text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff; */
   text-shadow: -1px 0 #99beff, 0 1px #99beff, 1px 0 #99beff, 0 -1px #99beff;
 }
-/* about me section 시작 */
+/* About me section 시작 */
 .About {
   padding-top: calc(var(--base-unit) * 9);
-  /* height: 432px; */
   height: calc(var(--base-unit) * 27);
 }
 .About .container {
@@ -280,19 +282,20 @@ header nav ul li a:active {
   text-align: center;
   transition: 0.3s;
 }
-.Projects .project_info h4,
-.Projects .project_info p {
+.project_info h4,
+.project_info p {
   padding: 13px;
+  text-align: center;
 }
-.Projects .project_info h4 {
+.project_info h4 {
   font-size: 58px;
   font-weight: bold;
   padding: 100px 0 40px 0;
 }
-.Projects .project_info p {
+.project_info p {
   font-size: 18px;
 }
-.Projects .link {
+.link {
   width: 500px;
   height: 350px; /* 위치변동 가능 */
   padding-top: 50px;
@@ -302,7 +305,7 @@ header nav ul li a:active {
   align-items: center;
   line-height: 50px;
 }
-.Projects .link a {
+.link a {
   width: 220px;
   color: #fff;
   border: 5px solid #fff;
@@ -316,11 +319,11 @@ header nav ul li a:active {
   border-radius: 65px;
   padding-left: 10px;
 }
-.Projects .link a span {
+.link a span {
   font-size: 32px;
   padding-left: 5px;
 }
-.Projects .link a:hover {
+.link a:hover {
   border-color: var(--blue);
   color: var(--blue);
   background: #fff;
@@ -336,4 +339,46 @@ header nav ul li a:active {
 .swiper-button-prev,
 .swiper-button-next {
   color: var(--blue);
+}
+/* project 소개 페이지 */
+.black{
+  background: var(--navy);
+  color: #fff;
+}
+.project_thumbnail{
+  padding-top: 160px;
+}
+.project_thumbnail img{
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5);
+  border: 10px solid #fff;
+  border-radius: 35px;
+}
+.project_thumbnail .project_info p{
+  font-size: 24px;
+  line-height: 36px;
+  text-align: left;
+}
+.project_thumbnail .link{
+  padding-top: 0;
+  height: 150px;
+}
+.project_thumbnail .link a{
+  width: 100px;
+  font-weight: bold;
+  font-size: 22px;
+  text-align: center;
+  padding-left: 0;
+  margin-left: 20px;
+}
+.project_thumbnail .link a:hover{
+  border: 5px solid var(--blue);
+  font-size: 22px;
+}
+.project_thumbnail .project_info p a{
+  font-size: 24px;
+  color: var(--blue);
+  transition: 0.1s;
+}
+.project_thumbnail .project_info p a:hover{
+  color: var(--yellow);
 }

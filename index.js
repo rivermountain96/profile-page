@@ -18,10 +18,10 @@ $(document).ready(function () {
     // Optional parameters
     direction: "horizontal",
     loop: true,
-    autoplay: {
-      delay: 3000,
-      pauseOnMouseEnter: true,
-    },
+    // autoplay: {
+    //   delay: 3000,
+    //   pauseOnMouseEnter: true,
+    // },
     pagination: {
       el: ".swiper-pagination",
     },

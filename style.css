@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;500&family=Playfair+Display:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;500&family=Playfair+Display:wght@700&display=swap&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
 @font-face {
@@ -246,7 +246,6 @@ header nav ul li a:active {
 }
 .Projects .swiper-slide img:hover {
   cursor: pointer;
-  /* transform: translateY(-5%); */
 }
 .Projects .project_name {
   position: relative;
@@ -270,8 +269,8 @@ header nav ul li a:active {
   z-index: -10;
 }
 .Projects .project_info {
-  opacity: 0;
-  background-color: rgba(0, 0, 0, 0.85);
+  opacity: 1; /*원래 0*/
+  background-color: rgba(0, 0, 0, 0.95);
   color: #fff;
   position: absolute;
   top: 12%;
@@ -279,10 +278,6 @@ header nav ul li a:active {
   width: 100%;
   height: 100%;
   text-align: center;
-  /*
-  align-items: center;
-  justify-content: center;
-  display: flex; */
   transition: 0.3s;
 }
 .Projects .project_info h4,
@@ -298,11 +293,38 @@ header nav ul li a:active {
   font-size: 18px;
 }
 .Projects .link {
-  position: absolute;
-  width: 100px;
-  height: 40px;
-  left: 100%;
-  top: 0;
+  width: 500px;
+  height: 350px; /* 위치변동 가능 */
+  padding-top: 50px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 50px;
+}
+.Projects .link a {
+  width: 220px;
+  color: #fff;
+  border: 5px solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 24px;
+  transition: 0.3s;
+  z-index: 3;
+  border-radius: 65px;
+  padding-left: 10px;
+}
+.Projects .link a span {
+  font-size: 32px;
+  padding-left: 5px;
+}
+.Projects .link a:hover {
+  border-color: var(--blue);
+  color: var(--blue);
+  background: #fff;
+  font-weight: bold;
 }
 /* 이미지에 호버할 때 project_info 표시 */
 .Projects .swiper-slide:hover .project_info {

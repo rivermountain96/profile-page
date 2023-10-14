@@ -35,7 +35,7 @@ a {
   line-height: 160px; /* 114.286% */
   text-transform: capitalize;
 }
-.h3{
+.h3 {
   text-align: center;
   font-size: 60px;
   font-weight: 700;
@@ -271,7 +271,7 @@ header nav ul li a:active {
   z-index: -10;
 }
 .Projects .project_info {
-  opacity: 1; /*원래 0*/
+  opacity: 0; /*원래 0*/
   background-color: rgba(0, 0, 0, 0.95);
   color: #fff;
   position: absolute;
@@ -297,7 +297,7 @@ header nav ul li a:active {
 }
 .link {
   width: 500px;
-  height: 350px; /* 위치변동 가능 */
+  height: 150px; /* 위치변동 가능 */
   padding-top: 50px;
   margin: 0 auto;
   display: flex;
@@ -341,28 +341,28 @@ header nav ul li a:active {
   color: var(--blue);
 }
 /* project 소개 페이지 */
-.black{
+.black {
   background: var(--navy);
   color: #fff;
 }
-.project_thumbnail{
+.project_thumbnail {
   padding-top: 160px;
 }
-.project_thumbnail img{
+.project_thumbnail img {
   box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5);
   border: 10px solid #fff;
   border-radius: 35px;
 }
-.project_thumbnail .project_info p{
+.project_thumbnail .project_info p {
   font-size: 24px;
   line-height: 36px;
   text-align: left;
 }
-.project_thumbnail .link{
+.project_thumbnail .link {
   padding-top: 0;
   height: 150px;
 }
-.project_thumbnail .link a{
+.project_thumbnail .link a {
   width: 100px;
   font-weight: bold;
   font-size: 22px;
@@ -370,15 +370,115 @@ header nav ul li a:active {
   padding-left: 0;
   margin-left: 20px;
 }
-.project_thumbnail .link a:hover{
+.project_thumbnail .link a:hover {
   border: 5px solid var(--blue);
   font-size: 22px;
 }
-.project_thumbnail .project_info p a{
+.project_thumbnail .project_info p a {
   font-size: 24px;
   color: var(--blue);
   transition: 0.1s;
 }
-.project_thumbnail .project_info p a:hover{
+.project_thumbnail .project_info p a:hover {
   color: var(--yellow);
+}
+.Contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.Contact h2 {
+  padding: 32px 0 56px 0;
+}
+.Contact p {
+  font-size: 18px;
+  line-height: 32px;
+  text-align: center;
+}
+
+.final_info {
+  padding: 40px 40px 28px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.final_info p {
+  text-align: left;
+}
+.final_info img {
+  width: 48px;
+  height: 48px;
+  padding-bottom: 10px;
+}
+.git_img_container {
+  position: relative;
+  display: inline-block;
+}
+.original-img,
+.hover-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.3s;
+}
+.hover-img {
+  opacity: 0;
+}
+.git_img_container:hover .original-img {
+  opacity: 0;
+}
+.git_img_container:hover .hover-img {
+  opacity: 1;
+}
+.git_img_container + p {
+  margin-top: 60px;
+}
+/* waypoint 플러그인 */
+/* Define keyframes for right-to-left animation */
+@keyframes animate-right {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Define keyframes for left-to-right animation */
+@keyframes animate-left {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Define keyframes for top-to-bottom animation */
+@keyframes animate-up {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Apply animations to elements */
+.animate-right {
+  animation: animate-right 2s ease-in-out;
+}
+
+.animate-left {
+  animation: animate-left 2s ease-in-out;
+}
+
+.animate-up {
+  animation: animate-up 2s ease-in-out;
 }

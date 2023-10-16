@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="title" content="이강산 프로필페이지" />
+    <meta name="title" content="이강산" />
+    <meta name="aurthor" content="이강산" />
+    <meta name="keywords" content="이강산, 프로필, 포트폴리오" />
+    <meta name="description" content="이강산 프로필페이지" />
     <title>Lee Kang San : Profile Page</title>
     <link
       rel="stylesheet"
@@ -25,16 +28,59 @@
       <nav class="container">
         <ul class="row justify-content-center align-items-center">
           <li class="col-md-3 d-flex justify-content-center">
-            <a href="#about">About</a>
+            <a href="#about">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="1em"
+                viewBox="0 0 512 512">
+                <path
+                  d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7
+                40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+              </svg>
+              About
+            </a>
           </li>
           <li class="col-md-3 d-flex justify-content-center">
-            <a href="#skills">Skills</a>
+            <a href="#skills">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="1em"
+                viewBox="0 0 448 512">
+                <path
+                  d="M96 0C43 0 0 43 0 96V416c0 53 43 96 96 96H384h32c17.7 0 32-14.3 32-32s-14.3-32-32-32V384c17.7 0 32-14.3 
+                  32-32V32c0-17.7-14.3-32-32-32H384 96zm0 384H352v64H96c-17.7 0-32-14.3-32-32s14.3-32 32-32zm32-240c0-8.8 7.2-16
+                  16-16H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16zm16 48H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8
+                  0-16-7.2-16-16s7.2-16 16-16z" />
+              </svg>
+              Skills
+            </a>
           </li>
           <li class="col-md-3 d-flex justify-content-center">
-            <a href="#projects">Projects</a>
+            <a href="#projects">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="1em"
+                viewBox="0 0 576 512">
+                <path
+                  d="M88.7 223.8L0 375.8V96C0 60.7 28.7 32 64 32H181.5c17 0 33.3 6.7 45.3 18.7l26.5 26.5c12 12 28.3 18.7 45.3
+                  18.7H416c35.3 0 64 28.7 64 64v32H144c-22.8 0-43.8 12.1-55.3 31.8zm27.6 16.1C122.1 230 132.6 224 144 224H544c11.5 0
+                  22 6.1 27.7 16.1s5.7 22.2-.1 32.1l-112 192C453.9 474 443.4 480 432 480H32c-11.5 0-22-6.1-27.7-16.1s-5.7-22.2 .1-32.1l112-192z" />
+              </svg>
+              Projects
+            </a>
           </li>
           <li class="col-md-3 d-flex justify-content-center">
-            <a href="#contact">Contact</a>
+            <a href="#contact">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="1em"
+                viewBox="0 0 448 512">
+                <path
+                  d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7
+                  512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z" />
+              </svg>
+              Contact
+            </a>
           </li>
         </ul>
       </nav>
@@ -61,7 +107,7 @@
     <section class="Adventage">
       <div class="container myadvantage">
         <div class="Adventage_myadvantage">
-          <h3>내가 바라본 나만의 장점</h3>
+          <h3 class="myImg_h3">내가 바라본 나만의 장점</h3>
           <div class="myImg row">
             <div class="myImg1 col-md-4">
               <div class="myImg_info2">장점1</div>
@@ -142,12 +188,12 @@
         <div class="skill_img d-flex justify-content-around align-items-center">
           <div class="skill_HTML">
             <h3 class="skills_h3">HTML</h3>
-            <img src="/img/html logo.svg" alt="HTML" />
+            <img src="/img/html_logo.svg" alt="HTML" />
             <p>90&#37;</p>
           </div>
           <div class="skill_CSS">
             <h3 class="skills_h3">CSS</h3>
-            <img src="/img/css logo.svg" alt="CSS" />
+            <img src="/img/css_logo.svg" alt="CSS" />
             <p>80&#37;</p>
           </div>
           <div class="skill_Javascript">
@@ -196,7 +242,7 @@
         <div class="skill_img d-flex justify-content-around align-items-center">
           <div class="skill_HWP">
             <h3 class="skills_h3">HWP</h3>
-            <img src="/img/HWP.svg" alt="Hancom Word Processor" />
+            <img src="/img/HWP.svg" alt="Hancom_Word_Processor" />
             <p>90&#37;</p>
           </div>
           <div class="skill_Excel">
@@ -268,7 +314,7 @@
                   </a>
                 </div>
               </div>
-              <img src="/img/samsung_pj.svg" alt="Samsung Display" />
+              <img src="/img/samsung_pj.svg" alt="Samsung_Display" />
             </li>
             <li class="swiper-slide">
               <h3 class="project_name">Keepcoding</h3>
@@ -296,7 +342,7 @@
               </div>
               <img
                 src="/img/keepcoding_LMS_pj.svg"
-                alt="keepcoding admin page" />
+                alt="keepcoding_admin_page" />
             </li>
             <li class="swiper-slide">
               <h3 class="project_name">Keepcoding</h3>
@@ -322,7 +368,7 @@
                   </a>
                 </div>
               </div>
-              <img src="/img/keepcoding_pj.svg" alt="Keepcoding user page" />
+              <img src="/img/keepcoding_pj.svg" alt="Keepcoding_user_page" />
             </li>
           </ul>
           <div class="swiper-pagination"></div>
@@ -340,6 +386,9 @@
         <p>아직 많이 부족하지만 저의 포트폴리오를 봐주셔서 감사합니다.</p>
         <p>저에게 궁금한 점이 있으시면 언제든지 연락 주시기 바랍니다.</p>
         <p>연락 주시면 3일 이내 회신드리겠습니다. 감사합니다!</p>
+        <div class="sendmail">
+          <a href="mailto:dlrkdtks7@gmail.com">Send Email</a>
+        </div>
       </div>
       <div class="final_info">
         <a
@@ -348,11 +397,11 @@
           target="_blank">
           <img
             src="img/github-mark-white.svg"
-            alt="github original icon"
+            alt="github_original_icon"
             class="original-img" />
           <img
             src="img/github-mark.svg"
-            alt="github hover icon"
+            alt="github_hover_icon"
             class="hover-img" />
         </a>
         <p>Frontend Developer Lee Kang San</p>

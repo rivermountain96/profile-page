@@ -20,6 +20,7 @@
 
 body {
   font-family: "Pretendard", sans-serif;
+  overflow-x: hidden; /* 가로 스크롤 숨김 */
 }
 a {
   text-decoration: none;
@@ -70,6 +71,16 @@ header nav ul li a {
   color: #fff;
   font-weight: 400;
   transition: 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+header nav ul li a svg {
+  fill: #fff;
+  transition: 0.2s;
+}
+header nav ul li a:hover svg {
+  fill: var(--yellow);
 }
 header nav ul li a:hover {
   color: #000;
@@ -78,7 +89,7 @@ header nav ul li a:hover {
 header nav ul li a:active {
   text-shadow: -1px 0 #99beff, 0 1px #99beff, 1px 0 #99beff, 0 -1px #99beff;
 }
-/* About me section 시작 */
+/* About 파트 시작 */
 .About {
   padding-top: calc(var(--base-unit) * 9);
   height: calc(var(--base-unit) * 27);
@@ -196,7 +207,54 @@ header nav ul li a:active {
 .container .history_content td {
   padding-left: 20px;
 }
-/* skills section 시작 */
+
+/* waypoint 플러그인 */
+
+/* animate-right 기존 요소 */
+.About_info_1,
+.myImg3 {
+  transform: translateX(100%);
+  opacity: 0;
+}
+/* animate-left 기존 요소 */
+.About_info_2,
+.myImg1 {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+/* animate-up 기존 요소 */
+.myImg2,
+.myImg_h3,
+.table,
+.history_title {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+/* animate 효과 후 */
+.About_info_1.animate-right,
+.myImg3.animate-right {
+  transform: translateX(0);
+  opacity: 1;
+  transition: transform 1.5s ease-in-out, opacity 1.5s ease-in-out;
+}
+
+.About_info_2.animate-left,
+.myImg1.animate-left {
+  transform: translateX(0);
+  opacity: 1;
+  transition: transform 1.5s ease-in-out, opacity 1.5s ease-in-out;
+}
+
+.myImg2.animate-up,
+.myImg_h3.animate-up,
+.table.animate-up,
+.history_title.animate-up {
+  transform: translateY(0);
+  opacity: 1;
+  transition: transform 1.5s ease-in-out, opacity 1.5s ease-in-out;
+}
+
+/* skills 파트 시작 */
 .Skills {
   padding-top: calc(var(--base-unit) * 4) 0;
 }
@@ -223,7 +281,7 @@ header nav ul li a:active {
   font-weight: bold;
   padding-bottom: 80px;
 }
-/* Projects section 시작 */
+/* Projects 파트 시작 */
 .Projects {
   padding: calc(var(--base-unit) * 10) 0;
 }
@@ -382,6 +440,7 @@ header nav ul li a:active {
 .project_thumbnail .project_info p a:hover {
   color: var(--yellow);
 }
+/* Contact 파트 */
 .Contact {
   display: flex;
   flex-direction: column;
@@ -397,7 +456,7 @@ header nav ul li a:active {
 }
 
 .final_info {
-  padding: 40px 40px 28px 28px;
+  padding: 0 40px 28px 28px;
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -433,52 +492,25 @@ header nav ul li a:active {
 .git_img_container + p {
   margin-top: 60px;
 }
-/* waypoint 플러그인 */
-/* Define keyframes for right-to-left animation */
-@keyframes animate-right {
-  0% {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
+.sendmail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
 }
-
-/* Define keyframes for left-to-right animation */
-@keyframes animate-left {
-  0% {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
+.sendmail a {
+  width: 150px;
+  height: 60px;
+  line-height: 60px;
+  background: var(--blue);
+  color: #fff;
+  text-align: center;
+  font-size: 22px;
+  border-radius: 15px;
+  transition: 0.3s;
 }
-
-/* Define keyframes for top-to-bottom animation */
-@keyframes animate-up {
-  0% {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-/* Apply animations to elements */
-.animate-right {
-  animation: animate-right 2s ease-in-out;
-}
-
-.animate-left {
-  animation: animate-left 2s ease-in-out;
-}
-
-.animate-up {
-  animation: animate-up 2s ease-in-out;
+.sendmail a:hover {
+  background: #fff;
+  color: var(--blue);
+  font-weight: 600;
 }

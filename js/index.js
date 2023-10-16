@@ -71,11 +71,11 @@ $(document).ready(function () {
   // 라이브러리 구문
   $("#skills").waypoint(
     function () {
-      animateSkills(); // section 을 보았을때
+      animateSkills(); // section 에 도착했을때
       this.destroy();
     },
     {
-      offset: "bottom-in-view",
+      offset: "bottom-in-view", // 섹션의 하단이 화면 뷰의 하단과 일치할 때 트리거
     }
   );
 
@@ -87,11 +87,13 @@ $(document).ready(function () {
   var advantageAnimation = function () {
     $(".myImg1").addClass("animate-left");
     $(".myImg2").addClass("animate-up");
+    $(".myImg_h3").addClass("animate-up");
     $(".myImg3").addClass("animate-right");
   };
 
   var mainHistoryAnimation = function () {
     $(".table").addClass("animate-up");
+    $(".history_title").addClass("animate-up");
   };
 
   // Waypoints for different sections

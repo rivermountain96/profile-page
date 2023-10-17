@@ -635,4 +635,24 @@ header nav ul li a:active {
   .About .container .About_info_1 {
     width: 100%;
   }
+  /* animate-right 기존 요소 */
+  .About_info_1,
+  .myImg3 {
+    transform: translateX(0);
+    opacity: 0;
+  }
+  /* animate-left 기존 요소 */
+  .About_info_2,
+  .myImg1 {
+    transform: translateX(0);
+    opacity: 0;
+  }
+  /* animate-up 기존 요소 */
+  .myImg2,
+  .myImg_h3,
+  .table,
+  .history_title {
+    transform: translateY(0);
+    opacity: 0;
+  }
 }

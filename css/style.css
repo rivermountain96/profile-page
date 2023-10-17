@@ -111,7 +111,7 @@ header nav ul li a:active {
   width: 1440px;
 }
 .About .container .About_info_1 {
-  background: url(/img/info_1.jpg);
+  background: url("../img/info_1.jpg");
   width: 340px;
   height: 432px;
   background-repeat: no-repeat;
@@ -158,13 +158,13 @@ header nav ul li a:active {
   text-align: center;
 }
 .container .myImg_info2 {
-  background: url(/img/info_2.jpg);
+  background: url("../img/info_2.jpg");
 }
 .container .myImg_info3 {
-  background: url(/img/info_3.jpg);
+  background: url("../img/info_3.jpg");
 }
 .container .myImg_info4 {
-  background: url(/img/info_4.jpg);
+  background: url("../img/info_4.jpg");
 }
 .container .myImg_info2,
 .container .myImg_info3,

@@ -20,7 +20,7 @@
 
 body {
   font-family: "Pretendard", sans-serif;
-  overflow-x: hidden; /* 가로 스크롤 숨김 */
+  /* overflow-x: hidden; */
 }
 a {
   text-decoration: none;
@@ -44,9 +44,6 @@ a {
 }
 h5 {
   font-weight: bold;
-}
-.container {
-  width: 1440px;
 }
 /* header */
 header {
@@ -91,9 +88,6 @@ header nav ul li a svg {
 #contact_svg:hover svg {
   fill: var(--navy);
 }
-/* header nav ul li a:hover svg {
-  fill: var(--yellow);
-} */
 header nav ul li a:hover {
   color: #000;
   font-weight: bold;
@@ -341,7 +335,7 @@ header nav ul li a:active {
   z-index: -10;
 }
 .Projects .project_info {
-  opacity: 0; /*원래 0*/
+  opacity: 1; /*원래 0*/
   background-color: rgba(0, 0, 0, 0.95);
   color: #fff;
   position: absolute;
@@ -525,4 +519,120 @@ header nav ul li a:active {
   background: #fff;
   color: var(--blue);
   font-weight: 600;
+}
+
+/* 반응형 768px */
+@media (max-width: 768px) {
+  .h2 {
+    font-size: 60px;
+    line-height: 64px;
+  }
+  h3 {
+    font-size: 48px;
+  }
+  h4 {
+    font-size: 26px;
+    line-height: 32px;
+  }
+  header nav ul {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  header nav ul li {
+    flex: 1;
+    font-size: 16px;
+  }
+  .About .container {
+    width: 100%;
+  }
+  .About .container .About_info_1 {
+    height: 340px;
+  }
+  #about .container {
+    gap: 20px;
+  }
+  .p_info p {
+    font-size: 14px;
+  }
+  .myadvantage {
+    padding: calc(var(--base-unit) * 4) 0;
+  }
+  .Advantage h3 {
+    font-size: 36px;
+    padding-bottom: 20px;
+  }
+  .Advantage p {
+    padding-bottom: 20px;
+  }
+  .container .history_title {
+    padding-right: 40px;
+  }
+  .container .history_content {
+    padding-left: 20px;
+    line-height: 20px;
+  }
+  .Mainhistory {
+    padding-bottom: 0;
+  }
+  .Skills .h2 {
+    padding: calc(var(--base-unit) * 5) 0;
+  }
+  .project_info h4 {
+    padding: 20px 0 8px 0;
+    font-size: 20px;
+  }
+  .project_info p {
+    font-size: 12px;
+    line-height: 18px;
+    padding: 2px;
+  }
+  .Projects {
+    padding: 0 0 20px 0;
+  }
+  .Projects .h2 {
+    padding-bottom: calc(var(--base-unit) * 3);
+  }
+  .Projects .project_name {
+    font-size: 30px;
+  }
+  .link {
+    width: 160px;
+    height: 60px;
+    padding-top: 10px;
+  }
+  .link a {
+    width: 100%;
+    font-size: 14px;
+    border-radius: 35px;
+    border: 3px solid #fff;
+  }
+  .final_info {
+    padding: 60px 40px 28px 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    width: 100%;
+  }
+  header nav ul {
+    width: 100%;
+    justify-content: center;
+  }
+  header nav ul li {
+    width: 60px;
+    flex: 1;
+    font-size: 12px;
+  }
+  header nav ul li a {
+    gap: 5px;
+  }
+  .About .container {
+    width: 300px;
+    height: 792px;
+    flex-direction: column;
+  }
+  .About .container .About_info_1 {
+    width: 100%;
+  }
 }

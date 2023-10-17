@@ -79,9 +79,21 @@ header nav ul li a svg {
   fill: #fff;
   transition: 0.2s;
 }
-header nav ul li a:hover svg {
+#about_svg:hover svg {
+  fill: #8950ee;
+}
+#skill_svg:hover svg {
+  fill: #29b481;
+}
+#projects_svg:hover svg {
   fill: var(--yellow);
 }
+#contact_svg:hover svg {
+  fill: var(--navy);
+}
+/* header nav ul li a:hover svg {
+  fill: var(--yellow);
+} */
 header nav ul li a:hover {
   color: #000;
   font-weight: bold;

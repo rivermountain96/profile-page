@@ -335,7 +335,7 @@ header nav ul li a:active {
   z-index: -10;
 }
 .Projects .project_info {
-  opacity: 1; /*원래 0*/
+  opacity: 0; /*원래 0*/
   background-color: rgba(0, 0, 0, 0.95);
   color: #fff;
   position: absolute;

@@ -3,12 +3,24 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
 @font-face {
-  font-family: "Pretendard-Regular",'GmarketSansMedium';
-  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
-    format("woff"),
-    url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
-  font-weight: 400, 500, normal;
-  font-style:normal;
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GmarketSansMedium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "OG_Renaissance_Secret-Rg";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2312-1@1.1/OG_Renaissance_Secret-Rg.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
 }
 
 :root {
@@ -76,13 +88,8 @@ h5 {
 }
 
 .custom-shape-divider-bottom-1707998662 .shape-fill {
-  /* fill: #F9F871; */
-  /* fill: #BEEF7E; */
   fill: #87E391;
-  /* fill: linear-gradient(to right, #00ADB5, #20C1B0, #53D3A3, #87E391, #BEEF7E, #F9F871); */
 }
-
-/* 스킬 시작 전 대각선 그레디언트 */
 
 .custom-shape-divider-bottom-1708002605 {
   position: absolute;
@@ -131,8 +138,7 @@ h5 {
 .custom-shape-divider-bottom-1708002777 .shape-fill {
   fill: #53D3A3;
 }
-
-/* 스킬 내용 후 대각선 그레디언트 */
+/* 그레디언트 끝 */
 
 /* header */
 header {
@@ -162,13 +168,12 @@ header nav ul li {
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  font-weight: normal;
 }
 header nav ul li a {
   color: var(--re-gray);
-  font-weight: 200;
   transition: 0.2s;
   display: flex;
-  gap: 5px;  /* 특수문자와 글자 간격 */
   text-transform: uppercase;
   justify-content: center;
   align-items: center;
@@ -189,14 +194,18 @@ header nav ul li a:hover .material-symbols-outlined{
   color: var(--re-white);
 }
 
+#about_svg,
+#about_svg span
+{
+  color: #eeeeee;
+}
+
 #about_svg,#skill_svg,#projects_svg,#contact_svg {
   /* 호버 글자 높이간 차이 */
   padding-right: 40px;
 }
 
 /* mouse 커서 */
-
-
 #circle{
   width: 50px;
   height: 50px;
@@ -215,6 +224,32 @@ header nav ul li a:hover .material-symbols-outlined{
   height: 25px;
   /* background-color: none; */
   border: 2px solid var(--re-green);
+}
+
+/* text 데코레이션 */ 
+
+.cover{
+  width: 100%;
+  /* margin-bottom: 10rem; */
+  display: flex;
+}
+.cover:nth-child(1){
+  margin-top: 5vh;
+  transform: rotate(-2deg);
+  /* background-color: #ff3796; */
+  background-color: hotpink;
+}
+.cover:nth-child(2){
+  margin-top: 5vh;
+  transform: rotate(2deg);
+  background-color: #5800ff;
+  justify-content: flex-end;
+}
+.cover p{
+  display: flex;
+  padding: 2.5rem 0;
+  font-size: 4rem;
+  font-family: "OG_Renaissance_Secret-Rg";
 }
 
 /* About 파트 시작 */
@@ -277,6 +312,7 @@ header nav ul li a:hover .material-symbols-outlined{
 /* fake_topic_about 빈공간 */
 #fake_topic_about{
   visibility: hidden;
+  line-height: 0.5em;
 }
 .About .container .About_info_1 {
   background-image: url(../img/info_1.jpg);
@@ -647,6 +683,7 @@ header nav ul li a:hover .material-symbols-outlined{
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  padding-top:60px
 }
 .Contact h2 {
   padding: 32px 0 56px 0;
@@ -723,14 +760,14 @@ header nav ul li a:hover .material-symbols-outlined{
     display: none;
   }
   #topic_about, #topic_about2{
-    font-size: 7rem;
+    font-size: 5rem;
   }
   .h2 {
     font-size: 60px;
     line-height: 64px;
   }
   h3 {
-    font-size: 48px;
+    font-size: 44px;
   }
   h4 {
     font-size: 26px;
@@ -765,6 +802,9 @@ header nav ul li a:hover .material-symbols-outlined{
   }
   .Advantage p {
     padding-bottom: 20px;
+  }
+  .myImg_h3{
+    font-size: 21px;
   }
   .container .history_title {
     padding-right: 40px;
@@ -829,6 +869,9 @@ header nav ul li a:hover .material-symbols-outlined{
   header nav ul li a {
     gap: 5px;
   }
+  #topic_about, #topic_about2{
+    font-size: 0.7rem;
+  }
   .About .container {
     width: 300px;
     height: 792px;
@@ -856,5 +899,13 @@ header nav ul li a:hover .material-symbols-outlined{
   .history_title {
     transform: translateY(0);
     opacity: 0;
+  }
+  .skill_img img {
+    width: 50px;
+    height: 50px;
+  }
+  /* text 애니메이션 */
+  .cover{
+    display: none;
   }
 }

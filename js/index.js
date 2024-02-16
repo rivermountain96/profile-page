@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  
+
   $(window).scroll(function() {
     
     // 링크별 위치 설정
@@ -14,11 +14,8 @@ $(document).ready(function () {
     let skillsSectionHeight = $('#skills').offset().top;
     let projectsSectionHeight = $('#projects').offset().top;
     let contactSectionHeight = $('#contact').offset().top;
-
-    // 초기 값 설정
-    aboutNav.css("color", "#eeeeee");
-    aboutNavSpan.css("color", "#eeeeee");
     
+
     if (scrollPosition >= aboutSectionHeight && scrollPosition < skillsSectionHeight) {
       // 현재 스크롤 위치가 #about 섹션의 위치와 #skills 섹션의 위치 사이에 있을 때
       aboutNav.css("color", "#eeeeee");
@@ -125,7 +122,50 @@ $(document).ready(function () {
     startDelay: 1000,
   }).go();
 
+  /* text scroll 효과 */
 
+  let pTag1 = $('.first_text_scroll');
+  let pTag2 = $('.second_text_scroll');
+
+  let textArr1 = 'This is Lee Kang San Portfolio, Hello Worlds.'.split(' ');
+  let textArr2 = 'Where Ideas Come to Life: Explore My Portfolio.'.split(' ');
+
+  function initTexts(element, textArray) {
+    textArray.push(...textArray);
+    for (let i = 0; i < textArray.length; i++) {
+      element.html(element.html() + textArray[i] + '&nbsp;&nbsp;&nbsp;&nbsp;');
+    }
+  }
+  initTexts(pTag1, textArr1);
+  initTexts(pTag2, textArr2);
+
+  let count1 = 0;
+  let count2 = 0;
+
+  function marqueeText(count, element, direction) {
+    if (count > element[0].scrollWidth / 2) {
+      element.css('transform', 'translateX(0)');
+      count = 0;
+    }
+    element.css('transform', `translateX(${count * direction}px)`);
+    return count;
+  }
+
+  function animate() {
+    count1++;
+    count2++;
+
+    count1 = marqueeText(count1, pTag1, -1);
+    count2 = marqueeText(count2, pTag2, 1);
+
+    window.requestAnimationFrame(animate);
+  }
+
+  animate();
+
+
+
+  /* swiper 라이브러리 */
   const swiper = new Swiper(".swiper", {
     // Optional parameters
     direction: "horizontal",

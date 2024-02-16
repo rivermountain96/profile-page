@@ -3,11 +3,12 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
 @font-face {
-  font-family: "Pretendard-Regular";
+  font-family: "Pretendard-Regular",'GmarketSansMedium';
   src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
-    format("woff");
-  font-weight: 400, 500;
-  font-style: normal;
+    format("woff"),
+    url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-weight: 400, 500, normal;
+  font-style:normal;
 }
 
 :root {
@@ -16,25 +17,33 @@
   --blue: #4d8eff;
   --gray: #444961;
   --yellow: #f7d241;
+  --re-black:#222831;
+  --re-gray: #393e46;
+  --re-green:#00adb5;
+  --re-white:#eeeeee;
+
 }
 
 body {
   font-family: "Pretendard", sans-serif;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
+  background: var(--re-black);
+  color: var(--re-white);
+  height: 100%;
 }
 a {
   text-decoration: none;
-  color: #000;
+  color: var(--re-black);
 }
 .h2 {
-  color: var(--navy);
+  color: var(--re-green);
   text-align: center;
-  font-family: Playfair Display;
-  font-size: 140px;
+  font-family: "GmarketSansMedium";
+  font-size: 160px;
   font-style: normal;
   font-weight: 700;
   line-height: 160px; /* 114.286% */
-  text-transform: capitalize;
+  text-transform:uppercase;
 }
 .h3 {
   text-align: center;
@@ -45,56 +54,169 @@ a {
 h5 {
   font-weight: bold;
 }
+
+/* 곡선 배경 그레디언트 */
+.custom-shape-divider-bottom-1707998662 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+  z-index: -100;
+  opacity: 0.7;
+}
+
+.custom-shape-divider-bottom-1707998662 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 214px;
+}
+
+.custom-shape-divider-bottom-1707998662 .shape-fill {
+  /* fill: #F9F871; */
+  /* fill: #BEEF7E; */
+  fill: #87E391;
+  /* fill: linear-gradient(to right, #00ADB5, #20C1B0, #53D3A3, #87E391, #BEEF7E, #F9F871); */
+}
+
+/* 스킬 시작 전 대각선 그레디언트 */
+
+.custom-shape-divider-bottom-1708002605 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+  z-index: -100;
+  opacity: 0.7;
+}
+
+.custom-shape-divider-bottom-1708002605 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 331px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1708002605 .shape-fill {
+  fill: #87E391;
+}
+
+.custom-shape-divider-bottom-1708002777 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+  z-index: -100;
+  opacity: 0.7;
+}
+
+.custom-shape-divider-bottom-1708002777 svg {
+  position: relative;
+  display: block;
+  width: calc(134% + 1.3px);
+  height: 354px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1708002777 .shape-fill {
+  fill: #53D3A3;
+}
+
+/* 스킬 내용 후 대각선 그레디언트 */
+
 /* header */
 header {
-  border-bottom: 1px solid #fff;
-  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.25);
   position: fixed;
-  width: 100%;
-  background: var(--blue);
+  width: 250px;
+  right: 0;
+  height: 100%;
+  background: none;
   z-index: 10;
 }
 header nav {
-  height: 80px;
+  height: 100%;
 }
 header nav ul {
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  /* 메뉴 글자 높이간 차이 */
+  gap: 30px;
 }
 header nav ul li {
   font-size: 28px;
-  line-height: 33px;
+  line-height: 28px;
+  font-family: "GmarketSansMedium";
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }
 header nav ul li a {
-  color: #fff;
-  font-weight: 400;
+  color: var(--re-gray);
+  font-weight: 200;
   transition: 0.2s;
   display: flex;
+  gap: 5px;  /* 특수문자와 글자 간격 */
+  text-transform: uppercase;
+  justify-content: center;
   align-items: center;
-  gap: 15px;
 }
-header nav ul li a svg {
-  fill: #fff;
+header nav ul li a:hover{
+  color: var(--re-white)
+}
+header nav ul li a span{
+  color: var(--gray);
+  height: 34px;
+  line-height: 34px;
   transition: 0.2s;
 }
-#about_svg:hover svg {
-  fill: #8950ee;
+header nav ul li a .material-symbols-outlined{
+  font-size: 34px;
 }
-#skill_svg:hover svg {
-  fill: #29b481;
+header nav ul li a:hover .material-symbols-outlined{
+  color: var(--re-white);
 }
-#projects_svg:hover svg {
-  fill: var(--yellow);
+
+#about_svg,#skill_svg,#projects_svg,#contact_svg {
+  /* 호버 글자 높이간 차이 */
+  padding-right: 40px;
 }
-#contact_svg:hover svg {
-  fill: var(--navy);
+
+/* mouse 커서 */
+
+
+#circle{
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  border-radius: 50%;
+  background: linear-gradient(90deg, rgba(249,248,113,1) 0%, rgba(83,211,163,1) 50%, rgba(0,173,181,1) 100%);
+  /* background: linear-gradient(90deg,  rgba(0,173,181,1) 0%, rgba(32,193,176,1) 25%, rgba(83,211,163,1) 50%,  rgba(135,227,145,1) 75%,rgba(249,248,113,1) 100%); */
+  /* background: radial-gradient(circle,  rgba(0,173,181,1) 0%, rgba(32,193,176,1) 25%, rgba(83,211,163,1) 50%,  rgba(135,227,145,1) 75%,rgba(249,248,113,1) 100%); */
+  /* background-color:var(--re-green); */
+  z-index: 10;
+  opacity: 0.5;
+  transition: 0.2s;
 }
-header nav ul li a:hover {
-  color: #000;
-  font-weight: bold;
+#circle.active{
+  width: 25px;
+  height: 25px;
+  /* background-color: none; */
+  border: 2px solid var(--re-green);
 }
-header nav ul li a:active {
-  text-shadow: -1px 0 #99beff, 0 1px #99beff, 1px 0 #99beff, 0 -1px #99beff;
-}
+
 /* About 파트 시작 */
 .About {
   padding-top: calc(var(--base-unit) * 9);
@@ -104,6 +226,58 @@ header nav ul li a:active {
   height: 100%;
   width: 1440px;
 }
+/* 이름 강조 - leekangsan */
+#leekangsan{
+  font-family: "GmarketSansMedium";
+  position: relative;
+  padding-bottom: calc(var(--base-unit) * 4);
+  font-weight: 700;
+  color: var(--re-white);
+  left: 0;
+  text-transform: uppercase;
+  color: var(--re-white);
+}
+#leekangsan::after{
+  content: "";
+  position: absolute;
+  bottom: calc(var(--base-unit) * 4);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 20px;
+  background-color: var(--re-green);
+  z-index: -10;
+}
+/* topic_about 첫 제목 */
+#topic_about{
+  position: absolute;
+  left: 0;
+  top: 130px;
+  bottom: 0;
+  right: 0;
+  font-size: 13rem;
+  width: auto;
+  height: 400px;
+  z-index: 100;
+  color: var(--re-gray);
+}
+/* #topic_about2 겹치는 글자 */
+#topic_about2{
+  position: absolute;
+  left: 0;
+  top: 135px;
+  bottom: 0;
+  right: -10px;
+  font-size: 13rem;
+  width: auto;
+  height: 400px;
+  z-index: 80;
+  color: var(--re-green);
+}
+/* fake_topic_about 빈공간 */
+#fake_topic_about{
+  visibility: hidden;
+}
 .About .container .About_info_1 {
   background-image: url(../img/info_1.jpg);
   width: 340px;
@@ -111,9 +285,7 @@ header nav ul li a:active {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  border-radius: 35px;
   text-indent: -99999999em;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 .About .container .About_info_2 {
   height: 432px;
@@ -134,6 +306,26 @@ header nav ul li a:active {
   font-style: normal;
   font-weight: 500;
   line-height: 28px; /* 140% */
+}
+/* 나만의 장점 밑줄 */
+#mykangsan{
+  position: relative;
+  padding-bottom: calc(var(--base-unit) * 4);
+  font-weight: 700;
+  color: var(--re-white);
+  left: 0;
+  text-transform: uppercase;
+}
+#mykangsan:after{
+  content: "";
+  position: absolute;
+  bottom: calc(var(--base-unit) * 4);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 20px;
+  background-color: var(--re-green);
+  z-index: -10;
 }
 .myadvantage {
   padding: calc(var(--base-unit) * 8) 0;
@@ -165,13 +357,13 @@ header nav ul li a:active {
 .container .myImg_info4 {
   width: 340px;
   height: 240px;
-  border-radius: 35px;
+  /* border-radius: 35px; */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   text-indent: -9999em;
   margin: 0 auto;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  /* box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); */
 }
 .container .myImg h5 {
   padding: calc(var(--base-unit) * 2) 0 var(--base-unit) 0;
@@ -318,10 +510,11 @@ header nav ul li a:active {
   padding-bottom: calc(var(--base-unit) * 4);
   font-size: 60px;
   font-weight: 600;
-  color: var(--gray);
+  color: var(--re-white);
   display: inline-block;
   left: 50%;
   transform: translateX(-50%);
+  text-transform: uppercase;
 }
 .Projects .project_name:after {
   content: "";
@@ -337,7 +530,7 @@ header nav ul li a:active {
 .Projects .project_info {
   opacity: 0; /*원래 0*/
   background-color: rgba(0, 0, 0, 0.95);
-  color: #fff;
+  color: var(--re-white);
   position: absolute;
   top: 12%;
   left: 0;
@@ -371,8 +564,8 @@ header nav ul li a:active {
 }
 .link a {
   width: 220px;
-  color: #fff;
-  border: 5px solid #fff;
+  color: var(--re-white);
+  border: 5px solid var(--re-white);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -388,9 +581,9 @@ header nav ul li a:active {
   padding-left: 5px;
 }
 .link a:hover {
-  border-color: var(--blue);
-  color: var(--blue);
-  background: #fff;
+  border-color: var(--re-green);
+  color: var(--re-green);
+  background: var(--re-white);
   font-weight: bold;
 }
 /* 이미지에 호버할 때 project_info 표시 */
@@ -398,24 +591,27 @@ header nav ul li a:active {
   opacity: 1;
 }
 .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: var(--blue);
+  background-color: var(--re-green);
 }
 .swiper-button-prev,
 .swiper-button-next {
-  color: var(--blue);
+  color: var(--re-green);
 }
 /* project 소개 페이지 */
 .black {
+  background: var(--re-black);
+  color: var(--re-white);
+}
+.navy{
   background: var(--navy);
-  color: #fff;
 }
 .project_thumbnail {
   padding-top: 160px;
 }
 .project_thumbnail img {
-  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5);
-  border: 10px solid #fff;
-  border-radius: 35px;
+  /* box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5); */
+  border: 10px solid var(--re-white);
+  /* border-radius: 35px; */
 }
 .project_thumbnail .project_info p {
   font-size: 24px;
@@ -435,12 +631,12 @@ header nav ul li a:active {
   margin-left: 20px;
 }
 .project_thumbnail .link a:hover {
-  border: 5px solid var(--blue);
+  border: 5px solid var(--re-green);
   font-size: 22px;
 }
 .project_thumbnail .project_info p a {
   font-size: 24px;
-  color: var(--blue);
+  color: var(--re-green);
   transition: 0.1s;
 }
 .project_thumbnail .project_info p a:hover {
@@ -508,21 +704,27 @@ header nav ul li a:active {
   width: 150px;
   height: 60px;
   line-height: 60px;
-  background: var(--blue);
-  color: #fff;
+  background: var(--re-green);
+  color: var(--re-white);
   text-align: center;
   font-size: 22px;
   border-radius: 15px;
   transition: 0.3s;
 }
 .sendmail a:hover {
-  background: #fff;
-  color: var(--blue);
+  background: var(--re-white);
+  color: var(--re-green);
   font-weight: 600;
 }
 
 /* 반응형 992px */
 @media (max-width: 992px) {
+  #circle{
+    display: none;
+  }
+  #topic_about, #topic_about2{
+    font-size: 7rem;
+  }
   .h2 {
     font-size: 60px;
     line-height: 64px;
@@ -604,7 +806,7 @@ header nav ul li a:active {
     width: 100%;
     font-size: 14px;
     border-radius: 35px;
-    border: 3px solid #fff;
+    border: 3px solid var(--re-white);
   }
   .final_info {
     padding: 60px 40px 28px 28px;

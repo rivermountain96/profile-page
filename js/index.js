@@ -1,18 +1,130 @@
 $(document).ready(function () {
-  $(
-    'a[href="#about"],a[href="#skills"], a[href="#projects"], a[href="#contact"]'
-  ).click(function (e) {
-    e.preventDefault();
+  
+  $(window).scroll(function() {
+    
+    // 링크별 위치 설정
+    let aboutNav = $('header nav ul li:first-child a'), aboutNavSpan = $('header nav ul li:first-child a span');
+    let skillsNav = $('header nav ul li:nth-child(2) a'), skillsNavSpan = $('header nav ul li:nth-child(2) a span');
+    let projectsNav = $('header nav ul li:nth-child(3) a'), projectsNavSpan = $('header nav ul li:nth-child(3) a span');
+    let contactNav = $('header nav ul li:nth-child(4) a'), contactNavSpan = $('header nav ul li:nth-child(4) a span');
 
-    let targetSection = $($(this).attr("href"));
+    // 섹션 별 스크롤 높이 지정
+    let scrollPosition = $(this).scrollTop() + 400;
+    let aboutSectionHeight = $('#about').offset().top;
+    let skillsSectionHeight = $('#skills').offset().top;
+    let projectsSectionHeight = $('#projects').offset().top;
+    let contactSectionHeight = $('#contact').offset().top;
 
-    $("html, body").animate(
-      {
-        scrollTop: targetSection.offset().top,
-      },
-      1000 // 1초 이동
-    );
+    // 초기 값 설정
+    aboutNav.css("color", "#eeeeee");
+    aboutNavSpan.css("color", "#eeeeee");
+    
+    if (scrollPosition >= aboutSectionHeight && scrollPosition < skillsSectionHeight) {
+      // 현재 스크롤 위치가 #about 섹션의 위치와 #skills 섹션의 위치 사이에 있을 때
+      aboutNav.css("color", "#eeeeee");
+      aboutNavSpan.css("color", "#eeeeee");
+      skillsNav.css("color", "#393e46");
+      skillsNavSpan.css("color", "#393e46");
+      projectsNav.css("color", "#393e46");
+      projectsNavSpan.css("color", "#393e46");
+      contactNav.css("color", "#393e46");
+      contactNavSpan.css("color", "#393e46");
+    } else if (scrollPosition >= skillsSectionHeight && scrollPosition < projectsSectionHeight){
+      // 현재 스크롤 위치가 #skills 섹션의 위치와 #projects 섹션의 위치 사이에 있을 때
+      aboutNav.css("color", "#393e46");
+      aboutNavSpan.css("color", "#393e46");
+      skillsNav.css("color", "#eeeeee");
+      skillsNavSpan.css("color", "#eeeeee");
+      projectsNav.css("color", "#393e46");
+      projectsNavSpan.css("color", "#393e46");
+      contactNav.css("color", "#393e46");
+      contactNavSpan.css("color", "#393e46");
+    } else if (scrollPosition >= projectsSectionHeight && scrollPosition < contactSectionHeight){
+      // 현재 스크롤 위치가 #projects 섹션의 위치와 #contact 섹션의 위치 사이에 있을 때
+      aboutNav.css("color", "#393e46");
+      aboutNavSpan.css("color", "#393e46");
+      skillsNav.css("color", "#393e46");
+      skillsNavSpan.css("color", "#393e46");
+      projectsNav.css("color", "#eeeeee");
+      projectsNavSpan.css("color", "#eeeeee");
+      contactNav.css("color", "#393e46");
+      contactNavSpan.css("color", "#393e46");
+    } else {
+      // 현재 스크롤 위치가 #contact에 있을 때
+      aboutNav.css("color", "#393e46");
+      aboutNavSpan.css("color", "#393e46");
+      skillsNav.css("color", "#393e46");
+      skillsNavSpan.css("color", "#393e46");
+      projectsNav.css("color", "#393e46");
+      projectsNavSpan.css("color", "#393e46");
+      contactNav.css("color", "#eeeeee");
+      contactNavSpan.css("color", "#eeeeee");
+    }
+
   });
+
+  // 클릭 시 해당 섹션으로 스크롤
+  $('a[href="#about"], a[href="#skills"], a[href="#projects"], a[href="#contact"]').click(function (e) {
+    e.preventDefault();
+    let targetSection = $($(this).attr("href"));
+    let targetOffset = targetSection.offset().top;
+
+    // 미세한 위치 조정 (스킬 섹션의 아래쪽으로 70px 이동)
+    targetOffset += 70;
+
+    $("html, body").animate({
+      scrollTop: targetOffset
+    }, 1000);
+  });
+
+  // 바로 따라오는 curser 효과
+  const circle = document.querySelector('#circle');
+
+  circle.style.display = 'none';
+
+  window.addEventListener('mousedown', () => {
+    circle.classList.add('active'); // 마우스 왼쪽 버튼을 누르면 'active' 클래스 추가
+  });
+
+  window.addEventListener('mouseup', () => {
+    circle.classList.remove('active'); // 마우스 왼쪽 버튼을 뗄 때 'active' 클래스 제거
+  });
+
+  window.addEventListener('mousemove', e => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+
+    circle.style.display = 'block';
+    circle.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
+  });
+
+
+
+  // type 라이브러리
+  new TypeIt("#topic_skills",  {
+    speed: 175,
+    deleteSpeed: 150,
+    loop: false,
+    waitUntilVisible: true,
+  }).go();
+
+  // topic_about2에 대한 TypeIt 인스턴스 생성
+  new TypeIt("#topic_project", {
+    speed: 175,
+    deleteSpeed: 150,
+    loop: false,
+    waitUntilVisible: true,
+  }).go();
+
+  // 내가 바라본 나만의 장점
+  new TypeIt(".myImg_h3", {
+    speed: 175,
+    deleteSpeed: 150,
+    loop: false,
+    waitUntilVisible: true,
+    startDelay: 1000,
+  }).go();
+
 
   const swiper = new Swiper(".swiper", {
     // Optional parameters
@@ -100,4 +212,11 @@ $(document).ready(function () {
   $(".About").waypoint(aboutMeAnimation, { offset: "50%" });
   $(".Adventage").waypoint(advantageAnimation, { offset: "50%" });
   $(".Mainhistory").waypoint(mainHistoryAnimation, { offset: "50%" });
+
+  // About과 마찬가지로 홈페이지가 열리자마자 실행되도록 설정
+  aboutMeAnimation(); 
+  advantageAnimation(); 
+  mainHistoryAnimation();
+
+  
 });

@@ -858,9 +858,9 @@ header nav ul li a:hover .material-symbols-outlined{
   .custom_section * {
     display: none;
   }
-
   header {
     width: 100%;
+    display: none;
   }
   header nav ul {
     width: 100%;
@@ -875,7 +875,14 @@ header nav ul li a:hover .material-symbols-outlined{
     gap: 5px;
   }
   #topic_about, #topic_about2{
-    font-size: 0.7rem;
+    font-size: 3rem;
+    top: 30px;
+  }
+  .About {
+    /* padding-top: calc(var(--base-unit) * 9); */
+    padding-top: calc(var(--base-unit) * 2);
+    /* height: calc(var(--base-unit) * 27); */
+    height: auto;
   }
   .About .container {
     width: 300px;
@@ -884,6 +891,13 @@ header nav ul li a:hover .material-symbols-outlined{
   }
   .About .container .About_info_1 {
     width: 100%;
+  }
+  .myImg_h3{
+    display: none;
+  }
+
+  .About .container .h4_info{
+    font-size: 24px;
   }
   /* animate-right 기존 요소 */
   .About_info_1,
@@ -913,4 +927,5 @@ header nav ul li a:hover .material-symbols-outlined{
   .cover{
     display: none;
   }
+
 }

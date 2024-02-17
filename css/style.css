@@ -854,6 +854,11 @@ header nav ul li a:hover .material-symbols-outlined{
 }
 
 @media (max-width: 480px) {
+  /* 곡선 레이어 */
+  .custom_section * {
+    display: none;
+  }
+
   header {
     width: 100%;
   }

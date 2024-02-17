@@ -854,6 +854,13 @@ header nav ul li a:hover .material-symbols-outlined{
 }
 
 @media (max-width: 480px) {
+  .history_title{
+    padding-bottom: calc(var(--base-unit)*2);
+  }
+  .history_title h3{
+    font-size: 38px;
+    line-height: 60px;
+  }
   /* 곡선 레이어 */
   .custom_section * {
     display: none;
@@ -895,7 +902,9 @@ header nav ul li a:hover .material-symbols-outlined{
   .myImg_h3{
     display: none;
   }
-
+  .myImg p{
+    padding-bottom: calc(var(--base-unit) * 2);
+  }
   .About .container .h4_info{
     font-size: 24px;
   }
@@ -918,6 +927,16 @@ header nav ul li a:hover .material-symbols-outlined{
   .history_title {
     transform: translateY(0);
     opacity: 0;
+  }
+  .history{
+    flex-direction: column;
+  }
+  .container .history_title{
+    width: 100%;
+    text-align: center;
+  }
+  .container .history_content{
+    width: 100%;
   }
   .skill_img img {
     width: 50px;

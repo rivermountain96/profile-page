@@ -258,5 +258,28 @@ $(document).ready(function () {
   advantageAnimation(); 
   mainHistoryAnimation();
 
-  
+  /* 반응형 */
+  if (window.matchMedia("(max-width: 480px)").matches) {
+    let historyTitle = document.querySelector('.history_title');
+    let h3Elements = historyTitle.querySelectorAll('h3');
+    h3Elements.forEach(element => element.style.display = 'inline');
+  }
+
+  if (window.matchMedia("(max-width: 480px)").matches) {
+    // 화면이 480px 이하인 경우에만 실행되도록 조건을 설정합니다.
+    // TypeIt 라이브러리 인스턴스를 생성하기 전에 조건을 검사합니다.
+    new TypeIt("#topic_skills",  {
+        speed: 0,  // 실행되지 않도록 속도를 0으로 설정합니다.
+        loop: false,
+    });
+    new TypeIt("#topic_project", {
+        speed: 0,  // 실행되지 않도록 속도를 0으로 설정합니다.
+        loop: false,
+    });
+    new TypeIt(".myImg_h3", {
+        speed: 0,  // 실행되지 않도록 속도를 0으로 설정합니다.
+        loop: false,
+    });
+}
+
 });

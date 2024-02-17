@@ -946,5 +946,8 @@ header nav ul li a:hover .material-symbols-outlined{
   .cover{
     display: none;
   }
-
+  .contact p{
+    display: inline-block;
+    text-align: left;
+  }
 }

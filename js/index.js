@@ -93,6 +93,8 @@ $(document).ready(function () {
 
     circle.style.display = 'block';
     circle.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
+
+
   });
 
 

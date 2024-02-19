@@ -67,6 +67,21 @@ h5 {
   font-weight: bold;
 }
 
+/* intro section */
+ .introsection{
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  width: auto;
+  height: 100vh;
+  z-index: -100;
+  opacity: 0.7;
+ }
+ .introsection .intro{
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+ }
 /* 곡선 배경 그레디언트 */
 .custom-shape-divider-bottom-1707998662 {
   position: absolute;
@@ -212,17 +227,13 @@ header nav ul li a:hover .material-symbols-outlined{
   position: fixed;
   border-radius: 50%;
   background: linear-gradient(90deg, rgba(249,248,113,1) 0%, rgba(83,211,163,1) 50%, rgba(0,173,181,1) 100%);
-  /* background: linear-gradient(90deg,  rgba(0,173,181,1) 0%, rgba(32,193,176,1) 25%, rgba(83,211,163,1) 50%,  rgba(135,227,145,1) 75%,rgba(249,248,113,1) 100%); */
-  /* background: radial-gradient(circle,  rgba(0,173,181,1) 0%, rgba(32,193,176,1) 25%, rgba(83,211,163,1) 50%,  rgba(135,227,145,1) 75%,rgba(249,248,113,1) 100%); */
-  /* background-color:var(--re-green); */
   z-index: 10;
-  opacity: 0.5;
+  opacity: 0.7;
   transition: 0.2s;
 }
 #circle.active{
   width: 25px;
   height: 25px;
-  /* background-color: none; */
   border: 2px solid var(--re-green);
 }
 
@@ -254,6 +265,7 @@ header nav ul li a:hover .material-symbols-outlined{
 
 /* About 파트 시작 */
 .About {
+  position: relative;
   padding-top: calc(var(--base-unit) * 9);
   height: calc(var(--base-unit) * 27);
 }
@@ -364,9 +376,17 @@ header nav ul li a:hover .material-symbols-outlined{
   z-index: -10;
 }
 .myadvantage {
-  padding: calc(var(--base-unit) * 8) 0;
+  padding: calc(var(--base-unit) * 4) 0;
 }
-.Adventage_myadvantage h3 {
+/* advantage section */
+
+.advantage_background{
+  background: #3E4756;
+  /* background: #00333C; */
+  /* background: linear-gradient(90deg, rgba(32,193,176,1) 0%, rgba(83,211,163,1) 40%, rgba(135,227,145,1) 100%); */
+  margin: calc(var(--base-unit) * 6) 0;
+}
+.advantage_myadvantage h3 {
   text-align: center;
   font-size: 64px;
   font-style: normal;
@@ -491,6 +511,7 @@ header nav ul li a:hover .material-symbols-outlined{
 /* skills 파트 시작 */
 .Skills {
   padding-top: calc(var(--base-unit) * 4) 0;
+  padding-bottom: calc(var(--base-unit) * 2) 0;
 }
 .Skills .h2 {
   padding: calc(var(--base-unit) * 8) 0;
@@ -518,9 +539,10 @@ header nav ul li a:hover .material-symbols-outlined{
 /* Projects 파트 시작 */
 .Projects {
   padding: calc(var(--base-unit) * 10) 0;
+  background: var(--re-black);
 }
 .Projects .h2 {
-  padding-bottom: calc(var(--base-unit) * 10);
+  padding-bottom: calc(var(--base-unit) * 8);
 }
 .Projects .swiper {
   width: 80%;
@@ -546,7 +568,7 @@ header nav ul li a:hover .material-symbols-outlined{
   padding-bottom: calc(var(--base-unit) * 4);
   font-size: 60px;
   font-weight: 600;
-  color: var(--re-white);
+  color: #fff;
   display: inline-block;
   left: 50%;
   transform: translateX(-50%);

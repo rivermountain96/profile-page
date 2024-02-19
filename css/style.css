@@ -8,18 +8,22 @@
   font-weight: 400;
   font-style: normal;
 }
-
 @font-face {
   font-family: "GmarketSansMedium";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
   font-family: "OG_Renaissance_Secret-Rg";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2312-1@1.1/OG_Renaissance_Secret-Rg.woff2") format("woff2");
   font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PyeongChangPeace-Bold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2') format('woff2');
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -47,6 +51,16 @@ a {
   text-decoration: none;
   color: var(--re-black);
 }
+h1{
+  color: var(--re-green);
+  text-align: left;
+  font-family: "GmarketSansMedium";
+  font-size: 250px;
+  text-transform: uppercase;
+  text-shadow: -5px 0px #fff, 0px 5px #fff, 5px 0px #fff, 0px -5px #fff;
+  font-weight: 900;
+  opacity: 0.8;
+}
 .h2 {
   color: var(--re-green);
   text-align: center;
@@ -66,22 +80,46 @@ a {
 h5 {
   font-weight: bold;
 }
+/* mytitle - LEE KANG SAN */
+.myname_title{
+  position: absolute;
+ }
+.myname_title_lee{
+left: 50px;
+top: 70px;
+}
+.myname_title_kang{
+left: 50px;
+top: 350px;
+}
+.myname_title_develope{
+left: 640px;
+top: 225px;
+font-size: 60px;
+font-family: 'PyeongChangPeace-Bold';
+color: var(--re-white);
+text-shadow: -2px 0px var(--re-green), 0px 2px var(--re-green), 2px 0px var(--re-green), 0px -2px var(--re-green);
+/* color: black; */
+}
 
-/* intro section */
- .introsection{
-  display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  grid-auto-rows: minmax(100px, auto);
-  width: auto;
-  height: 100vh;
-  z-index: -100;
-  opacity: 0.7;
- }
- .introsection .intro{
-  width: 100%;
-  height: auto;
-  object-fit: cover;
- }
+/* intro section 그리드 */
+.introsection{
+position: relative;
+display: grid;
+grid-template-columns: repeat(10, 1fr);
+grid-auto-rows: 1fr;
+width: auto;
+height: 100vh;
+z-index: -101;
+opacity: 0.2;
+overflow: hidden;
+}
+.introsection .intro{
+width: 100%; 
+height: 100%; 
+object-fit: cover;
+}
+
 /* 곡선 배경 그레디언트 */
 .custom-shape-divider-bottom-1707998662 {
   position: absolute;
@@ -92,7 +130,7 @@ h5 {
   line-height: 0;
   transform: rotate(180deg);
   z-index: -100;
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
 .custom-shape-divider-bottom-1707998662 svg {
@@ -115,7 +153,7 @@ h5 {
   line-height: 0;
   transform: rotate(180deg);
   z-index: -100;
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
 .custom-shape-divider-bottom-1708002605 svg {
@@ -139,7 +177,7 @@ h5 {
   line-height: 0;
   transform: rotate(180deg);
   z-index: -100;
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
 .custom-shape-divider-bottom-1708002777 svg {

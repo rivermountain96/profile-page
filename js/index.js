@@ -46,7 +46,7 @@ $(document).ready(function () {
       projectsNavSpan.css("color", "#eeeeee");
       contactNav.css("color", "#393e46");
       contactNavSpan.css("color", "#393e46");
-    } else {
+    } else if (scrollPosition >= contactSectionHeight){
       // 현재 스크롤 위치가 #contact에 있을 때
       aboutNav.css("color", "#393e46");
       aboutNavSpan.css("color", "#393e46");
@@ -252,13 +252,8 @@ $(document).ready(function () {
 
   // Waypoints for different sections
   $(".About").waypoint(aboutMeAnimation, { offset: "50%" });
-  $(".Adventage").waypoint(advantageAnimation, { offset: "50%" });
+  $(".Advantage").waypoint(advantageAnimation, { offset: "50%" });
   $(".Mainhistory").waypoint(mainHistoryAnimation, { offset: "50%" });
-
-  // About과 마찬가지로 홈페이지가 열리자마자 실행되도록 설정
-  aboutMeAnimation(); 
-  advantageAnimation(); 
-  mainHistoryAnimation();
 
   /* 반응형 */
   if (window.matchMedia("(max-width: 480px)").matches) {
